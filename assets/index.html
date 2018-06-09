@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crystal Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <!--start the container-->
+        <div class="container">
+            <div class="row">
+                <!--heading-->
+                <div class="col-3-md title">
+                    <h1>Crystal Collector!</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <!--instructions-->
+                <div class="col-md-6 instructions">
+                <p>You will be giving a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your totoal score to randsom number, you lose the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it</p>
+                <p>Each time when the game starts, the game will change the values of each crystal</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <!--added 2 columns. one for the number the user needs to matchj. other is the keep track of wins and loses.-->
+                <div class="col-md-3 num">
+                    <strong>
+                        <h4>Match this number!</h4>
+                    <div cclass="number" id="number"></div>
+                    </strong>
+
+                </div>
+                 <div class="col-md-2 wins-loses">
+                    <h3>Wins:
+                        <span id="userWins"></span>
+                    
+                    <br>
+                    <h3>Loses: 
+                        <span id="userLoses"></span>
+                    </h3> 
+
+                </div>
+            </div>  
+                <!--adding images for the gems. buttons will be added via js.-->
+            <div class="row gemrow">
+                    <div class="col-md-10 gems">
+                        <img  class="img" id="gem1" src="images/blue.png">
+                        <img  class="img" id="gem2" src="images/diamond.png">
+                        <img  class="img" id="gem3" src="images/red.png">
+                        <img  class="img" id="gem4" src="images/yellow.png">
+                    </div>
+            </div> 
+            <!--User score. Needs to match the random number generated.-->
+              
+            <div class="row">
+                <div class="col-md-5 score">
+                    <h3>Score: 
+                        <span id="userScore"></span>
+                    </h3>
+                </div>
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="javascript/game.js"></script>
+    </body>
